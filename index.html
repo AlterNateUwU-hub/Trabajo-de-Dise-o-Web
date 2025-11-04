@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Cursos Universitarios</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    header {
+      background-color: #800000;
+    }
+
+    nav a {
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700 !important;
+    }
+    footer {
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #800000;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Gestor de Cursos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="docentes.html">Docentes</a></li>
+          <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-5 text-center">
+
+    <!-- Banner -->
+    <section class="bg-light p-5 rounded mb-5 shadow-sm">
+      <h2 class="fw-bold mb-3">Organiza tus cursos fácilmente</h2>
+      <p class="lead mb-4">Administra horarios, materiales y tareas desde un solo lugar. Simplifica tu vida académica con nuestro sistema intuitivo.</p>
+      <a href="cursos.html" class="btn btn-danger btn-lg" id="btn-ver">Ver Cursos</a>
+    </section>
+
+    <!-- Funciones principales -->
+    <section class="mb-5">
+      <h3 class="fw-semibold mb-4">Funciones principales</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="card shadow-sm p-4 bg-white border-0" id="verCursosCard">
+            📚 <strong>Ver cursos inscritos</strong>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm p-4 bg-white border-0" id="verCursosCard">
+            🗓️ <strong>Consultar horarios</strong>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm p-4 bg-white border-0" id="verCursosCard">
+            📤 <strong>Subir tareas</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="mb-5">
+      <h3 class="fw-semibold mb-4">Beneficios de usar el Gestor de Cursos</h3>
+      <ul class="list-group list-group-flush text-start d-inline-block text-start mx-auto" style="max-width: 500px;">
+        <li class="list-group-item">✔️ Mantén tus horarios actualizados en todo momento.</li>
+        <li class="list-group-item">✔️ Accede rápidamente al material de cada clase.</li>
+        <li class="list-group-item">✔️ Guarda tus avances y entregas de tareas.</li>
+        <li class="list-group-item">✔️ Compatible con dispositivos móviles y tablets.</li>
+      </ul>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="mb-5">
+      <h3 class="fw-semibold mb-4">Lo que dicen los estudiantes</h3>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm">
+            <p>"Desde que uso el Gestor de Cursos, tengo todo organizado. Ya no olvido fechas de entrega."</p>
+            <strong>- Ana López, Psicología</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm">
+            <p>"Me encanta poder revisar mis horarios en cualquier momento. Súper útil."</p>
+            <strong>- Luis Torres, Ingeniería</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-white py-3" style="background-color: #222;">
+    <p class="mb-0">2025 © Gestor de Cursos — Todos los derechos reservados</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    $(document).ready(function() {
+      $("main").hide().fadeIn(700);
+
+      $("#verCursosCard").click(function() {
+        alert("🧩 Estado de prueba: Esta función aún está en desarrollo.");
+      });
+    });
+  </script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
