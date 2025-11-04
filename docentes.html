@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docentes - Gestor de Cursos Universitarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* Navbar personalizado */
+    header {
+      background-color: #800000;
+    }
+
+    nav a {
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700 !important;
+    }
+    /* Título y tarjetas */
+    h2 {
+      color: #800000;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* Footer fijo al final */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 NAVBAR -->
+  <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #800000;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Gestor de Cursos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="docentes.html">Docentes</a></li>
+          <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- 👨‍🏫 CONTENIDO PRINCIPAL -->
+  <main>
+    <div class="container text-center mt-5">
+      <h2>Nuestros Docentes Universitarios</h2>
+      <p class="text-muted mb-5">Conoce al equipo académico encargado de impartir los cursos.</p>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://saposyprincesas.elmundo.es/assets/2022/11/mujer-ingeniera.jpg" alt="Docente 1" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Dra. Mariana López</h5>
+              <p class="card-text">Especialista en Ingeniería de Software</p>
+              <p><strong>Horario:</strong> Lunes y Miércoles - 9:00 a.m. a 11:00 a.m.</p>
+              <button class="btn btn-outline-danger ver-info">Ver Información</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://www.palermo.edu/cienciassociales/images/tops/top-mobile-doc-psicologia.jpg" alt="Docente 2" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Mg. Carlos Fernández</h5>
+              <p class="card-text">Docente de Psicología Organizacional</p>
+              <p><strong>Horario:</strong> Martes y Jueves - 10:00 a.m. a 12:00 p.m.</p>
+              <button class="btn btn-outline-danger ver-info">Ver Información</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3dPHfxansneJHmIMZiI4irQtV5nQ1ZetlKA&s" alt="Docente 3" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">PhD. Andrea Ramírez</h5>
+              <p class="card-text">Catedrática en Análisis de Datos y Estadística</p>
+              <p><strong>Horario:</strong> Viernes - 8:00 a.m. a 12:00 p.m.</p>
+              <button class="btn btn-outline-danger ver-info">Ver Información</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 🦶 FOOTER -->
+  <footer>
+    <p>&copy; 2025 Gestor de Cursos Universitarios. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ⚙️ Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".ver-info").click(function() {
+        const nombre = $(this).siblings(".card-title").text();
+        alert("📚 Estado de prueba: Información de " + nombre);
+      });
+
+      $("nav a").click(function(e) {
+        e.preventDefault();
+        alert("⚙️ Estado de prueba");
+      });
+    });
+  </script>
+</body>
+</html>
